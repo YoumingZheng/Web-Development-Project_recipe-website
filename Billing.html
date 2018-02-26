@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Services</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src = "js/angular.js"></script>
+
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+						$(window).load(function(){
+						  $('.flexslider').flexslider({
+							animation: "slide",
+							start: function(slider){
+							  $('body').removeClass('loading');
+							}
+						  });
+						});
+					  </script>
+<!-- //FlexSlider -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+	
+<body ng-app = "">
+<!-- banner -->
+	<div class="banner1">
+		<div class="container">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						<div class="logo">
+							<a class="navbar-brand" href="index.html">Bon Apptite <span>Healthy And Tasty Food</span></a>
+						</div>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+						
+						<li class="active"><a href="services.html">Services</a></li>
+					
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="AboutUs.html">About Us</a></li>
+					  </ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+     <br>
+    <div class = "col-md-2"></div>
+	<div class = "col-md-8">
+	<h3 class = "text-primary">Please fill your billing information</h3>
+		<hr style = "border-top:1px dotted #ccc;"/>
+        <div class="panel-heading">
+        	Billing Address
+        </div>
+        <div class="panel-body">
+        	<form name="form">
+        		<label for="firstName" class="control-label">Name:</label>
+        		<div class="row padding-top-10">
+        			<div class="col-md-6">
+        			<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" ng-model="firstName" required>
+        		    <span ng-show="form.firstName.$error.required">Required!</span>
+        			</div>
+        			<div class="col-md-6"><input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" ng-model="lastName" required>
+        		    <span ng-show="form.lastName.$error.required">Required!</span>
+        			</div>	
+        		</div>
+        		<label for="email" class="control-label">Email:</label>
+        		<div class="row padding-top-10">
+        			<div class="col-md-12">
+        			 <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email" required>
+        			 <span ng-show="form.email.$error.required">Required!</span>
+        			 <span ng-show="form.email.$error.email">Not a valid email!</span>
+        			</div>
+        		</div>
+        		<label for="phone" class="control-label">Phone Number:</label>
+        		<div class="row padding-top-10">
+        			<div class="col-md-12">
+        			 <input type="text" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX"/ ng-model="phone" ng-minlength=10 ng-maxlength=10 required>
+        			 <span ng-show="form.phone.$error.required">Required!</span>
+                                  <span ng-show="form.phone.$error.minlength">Please enter 10 digital phone number!</span>
+                                 <span ng-show="form.phone.$error.maxlength">Please enter 10 digital phone number!</span>
+        			</div>
+        		</div>
+        		<label for="address1" class="control-label">Address:</label>
+        		<div class="row padding-top-10">
+        			<div class="col-md-12"><input type="text" class="form-control" id="address1" placeholder="Address line 1" name="address1" ng-model="address1" required>
+        			<span ng-show="form.address1.$error.required">Required!</span>
+        			</div>
+        		</div>
+        		<div class="row padding-top-10">
+        			<div class="col-md-12"><input type="text" class="form-control" id="address2" placeholder="Address line 2" name="address2" ng-model="address2" required>
+        			<span ng-show="form.address2.$error.required">Required!</span>
+        			</div>
+        		</div>
+        		<div class="row padding-top-10">
+        			<div class="col-md-6">
+        				<label for="city" class="control-label">City:</label>
+        			</div>
+
+        			<div class="col-md-2">
+        				<label for="state" class="control-label">State:</label>
+        			</div>
+
+        			<div class="col-md-4">
+        				<label for="zipcode" class="control-label">Zipcode:</label>
+
+        			</div>
+
+        		</div>
+        		<div class="row padding-top-10">
+        			<div class="col-md-6">
+        			<input type="text" class="form-control" id="city" name="city" placeholder="Your city" ng-model="city" required>
+        			<span ng-show="form.city.$error.required">Required!</span>	
+        			</div>
+        			<div class="col-md-2">
+        		   <input type="text" class="form-control" id="state" name="state" placeholder="Your state" ng-model="state" required>
+        		    <span ng-show="form.state.$error.required">Required!</span>	
+        				
+
+        			</div>
+        			<div class="col-md-4">
+        			 <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="zipcode" ng-model="zipcode" ng-minlength=5 ng-maxlength=5 required>
+        			 <span ng-show="form.zipcode.$error.required">Required!</span>
+                                 <span ng-show="form.zipcode.$error.maxlength">Please enter 5 digital zipcode!</span>
+                                 <span ng-show="form.zipcode.$error.minlength">Please enter 5 digital zipcode!</span> 	
+        			</div>
+        			
+        		</div>
+        	</form>
+        </div>
+        <div class="col-md-2"> <a href="services.php"><input name="back" type="submit" value="Back"></a>	</div>
+        
+			
+			<link rel="stylesheet" href="css/swipebox.css">
+						<script src="js/jquery.swipebox.min.js"></script> 
+							<script type="text/javascript">
+								jQuery(function($) {
+									$(".swipebox").swipebox();
+								});
+							</script>
+		</div>
+	</div>
+<!-- //services -->
+<!--footer-->
+
+</body>
+</html>
